@@ -2,6 +2,9 @@ from django.shortcuts import render
 from django.views.generic.list import ListView
 from studentorg.models import Organization
 
+def home_view(request):
+    return render(request, "home.html") 
+
 class HomePageView(ListView):
     model = Organization
     context_object_name = "home"
